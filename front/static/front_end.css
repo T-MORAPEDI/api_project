@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://footwearnews.com/wp-content/uploads/2018/02/goat-flight-club-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This ensures horizontal centering */
+    justify-content: center; /* This ensures vertical centering */
+    padding: 20px; /* Some space from edges if needed */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+header, footer {
+    width: 100%; /* Make them take up all available width */
+    max-width: 800px; /* Consistent with the earlier setting */
+    border-radius: 6px;
+    padding: 15px;
+    margin: 10px 0; /* Add some space between these elements */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+}
+header a, footer a {
+    color: #FFD700;  /* Gold color for better visibility against the dark background */
+    text-decoration: none;  /* Remove the underline for a cleaner look */
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;  /* Add the underline back on hover for better user experience */
+}
+
+
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 6px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.3); /* Adjusted for transparency */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    font-weight: bold;          /* Bold text */
+    font-size: 18px;            /* Increase font size */
+    color: #2C3E50;             /* Darker shade for better contrast */
+    margin-bottom: 15px;        /* Increase margin for more space between labels and inputs */
+    text-transform: uppercase;  /* Convert text to uppercase */
+    letter-spacing: 0.5px;      /* Increase spacing between characters */
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 12px 15px; /* Adjusted padding for comfort */
+    margin-bottom: 16px; /* Adjusted margin */
+    border: 1px solid #ccc; /* Slightly darker border for better contrast */
+    border-radius: 3px; /* Slight rounded edges */
+    font-size: 16px;
+    color: #060606; /* Input text color set to a darker shade for better readability */
+}
+
+input[type="submit"] {
+    background-color: #006699; /* A more corporate blue color */
+    color: #fff;
+    padding: 12px 20px; /* More padding for a bolder button */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #004466; /* Darker shade of blue for hover effect */
+}
