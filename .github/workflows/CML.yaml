@@ -1,0 +1,26 @@
+name: api_project
+on: [push]
+jobs:
+  train-and-report:
+    runs-on: ubuntu-latest
+    container: docker://ghcr.io/iterative/cml:0-dvc2-base1
+    steps:
+      - uses: actions/checkout@v3
+      - name: Train model
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Your ML workflow goes here
+          pip install -r requirements.txt
+          python script.py
+      - name: Write CML report
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Post reports as comments in GitHub PRs
+          echo '## MOST USED WORDS' > report.md
+          cat results.txt >> report.md
+          echo '![](./TOP_10_NEGATIVE_RATING_PHRASES.png "TOP_10_NEGATIVE_RATING_PHRASES")' >> report.md
+          echo '![](./TOP_10_POSITIVE_RATING_PHRASES.png "TOP_10_POSITIVE_RATING_PHRASES")' >> report.md
+          
+          cml comment create report.md
